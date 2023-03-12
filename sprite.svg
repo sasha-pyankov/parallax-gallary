@@ -1,0 +1,14 @@
+ <svg xmlns="http://www.w3.org/2000/svg">
+
+    <symbol id="arr-right" viewBox="0 0 14 14">                                      <!-- изменяем id и viewBox -->
+         <path d="M6 12.6562L11.6569 6.9994L6 1.34254" stroke-width="2" />           <!--вставляем нужный path из SVG-файла -->
+    </symbol>
+
+</svg>
+
+
+<!-- подключение  иконки в HTML:
+
+    <svg class="icon">
+        <use xlink: href="sprite.svg#arr-right"></use>
+    </svg> -->
