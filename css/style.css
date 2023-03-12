@@ -121,6 +121,15 @@ body._lock {
 }
 
 /* gallary */
+.wrapper {
+  overflow: hidden;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+}
+
 .gallary {
   width: 100vw;
   height: 100vh;
@@ -131,14 +140,25 @@ body._lock {
   top: 20vh;
   left: 8vw;
   max-width: 24vw;
+  min-width: 30%;
   -webkit-transition: opacity 0.75s cubic-bezier(0.2, 0.6, 0, 1), -webkit-transform 0.75s cubic-bezier(0.2, 0.6, 0, 1);
   transition: opacity 0.75s cubic-bezier(0.2, 0.6, 0, 1), -webkit-transform 0.75s cubic-bezier(0.2, 0.6, 0, 1);
   transition: opacity 0.75s cubic-bezier(0.2, 0.6, 0, 1), transform 0.75s cubic-bezier(0.2, 0.6, 0, 1);
   transition: opacity 0.75s cubic-bezier(0.2, 0.6, 0, 1), transform 0.75s cubic-bezier(0.2, 0.6, 0, 1), -webkit-transform 0.75s cubic-bezier(0.2, 0.6, 0, 1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
 }
 @media (max-width: 1330px) {
   .gallary__description {
     font-size: calc(12px + 13 * ((100vw - 320px) / 1010));
+  }
+}
+@media (max-width: 400px) {
+  .gallary__description {
+    top: 30vh;
   }
 }
 .gallary__description p {
@@ -161,13 +181,14 @@ body._lock {
 }
 .gallary__logo {
   font-size: 55px;
+  line-height: 1.5;
   font-weight: 900;
   letter-spacing: 2px;
   display: inline-block;
   background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 @media (max-width: 1330px) {
   .gallary__logo {
@@ -181,6 +202,11 @@ body._lock {
           transform: rotate(15deg);
   overflow: visible;
   top: 10vh;
+}
+@media (max-width: 400px) {
+  .slider {
+    top: 30vh;
+  }
 }
 .slider_bg {
   z-index: 0;
@@ -216,6 +242,16 @@ body._lock {
           transform: rotate(-15deg) scale(1.45);
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0 0 0 10000px;
           box-shadow: rgba(0, 0, 0, 0.75) 0 0 0 10000px;
+}
+@media (max-width: 767.98px) {
+  .slider__slide {
+    max-height: 55vh;
+  }
+}
+@media (max-width: 400px) {
+  .slider__slide {
+    max-height: 35vh;
+  }
 }
 .slider__img {
   width: 300%;
